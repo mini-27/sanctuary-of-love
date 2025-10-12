@@ -6,7 +6,7 @@ This is a place where admiration glows, joy sparkles, and every note whispers, _
 
 This sanctuary is more than messages; it’s a constellation of love, a fan-crafted world that celebrates every little thing that makes Heeseung so special. Step through the magical doors and feel it.✨
 
-💜 **Visit the page here:** [Sanctuary of Love](https://your-public-link.com)
+💜 **Visit the page here:** [Sanctuary of Love](https://mini-27.github.io/sanctuary-of-love)
 
 ---
 
