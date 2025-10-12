@@ -1,0 +1,439 @@
+/* Sanctuary of Love - Letters Page Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cookie&family=Noto+Serif+KR:wght@400&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --ivory: #fffaf3;
+    --ivory-2: #fff7ef;
+    --purple: #8a6bbf;
+    --purple-soft: #d9cbea;
+    --muted: #6b5f6fe0;
+    --card-radius: 18px;
+    --gap: 24px;
+    --shadow: 0 12px 30px rgba(24, 12, 40, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, var(--ivory-2) 0%, var(--purple-soft) 50%, var(--purple) 100%);
+}
+
+body {
+    font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+    color: #2d2b2e;
+    background: linear-gradient(180deg, var(--ivory-2), var(--ivory));
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-font-smoothing: antialiased;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Audio Button */
+.audio-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    color: var(--purple);
+    transition: color 0.3s ease;
+    font-size: 26px;
+}
+
+.audio-btn:hover {
+    color: #c8b2e6;
+}
+
+.audio-muted {
+    color: #7d7580e0;
+}
+
+/* Page transition */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--ivory-2) 0%, var(--purple-soft) 50%, var(--purple) 100%);
+    background-size: 200% 200%;
+    animation: auroraFlow 12s ease-in-out infinite;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.page-transition.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes auroraFlow {
+    0% {
+        background-position: 0% 50%;
+        filter: brightness(1) blur(0px);
+    }
+
+    50% {
+        background-position: 100% 50%;
+        filter: brightness(1.15) blur(2px);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(1) blur(0px);
+    }
+}
+
+/* Transition content */
+.transition-content {
+    text-align: center;
+    color: #533587;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    font-family: "Quicksand", serif;
+    letter-spacing: 1px;
+    transition: opacity 0.5s ease;
+}
+
+.heart-loader {
+    font-size: 3rem;
+    animation: pulse 1.5s ease-in-out infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.loading-text {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: linear-gradient(180deg, rgba(138, 107, 191, 0.08), rgba(255, 255, 255, 0.0));
+    position: relative;
+}
+
+.header h1 {
+    font-family: 'Berkshire Swash', serif;
+    font-size: clamp(25px, 6vw, 43px);
+    color: var(--purple);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    font-size: clamp(12px, 3vw, 15px);
+    font-weight: 400;
+    color: var(--muted);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: clamp(14px, 3vw, 18px);
+    font-family: 'Cookie', cursive;
+    color: var(--purple);
+    margin-top: 8px;
+    margin: 8px auto;
+    max-width: 680px;
+}
+
+/* Gallery container */
+.gallery-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+}
+
+/* Memory grid */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 0 80px;
+}
+
+/* Memory card */
+.memory-card {
+    background: var(--ivory);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgba(138, 107, 191, 0.1);
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(24, 12, 40, 0.15);
+}
+
+/* Card image */
+.card-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 600;
+    color: var(--purple);
+    margin-bottom: 8px;
+    font-size: clamp(14px, 3vw, 16px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.country {
+    font-size: clamp(10px, 2.5vw, 12px);
+    color: var(--muted);
+    background: var(--purple-soft);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: flex;
+    text-align: center;
+}
+
+.message {
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.message-kr {
+    font-family: 'Noto Serif KR', serif;
+    line-height: 1.8;
+}
+
+.emoji {
+    font-size: clamp(12px, 3vw, 14px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: clamp(12px, 3vw, 15px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.footer a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.magic-dust {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dust {
+    position: absolute;
+    background: #e5bafa;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(1px);
+    z-index: 1;
+    opacity: 0.2;
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.1;
+        transform: scale(1);
+        box-shadow: 0 0 5px 1px rgba(23, 23, 23, 0.5);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(1.2);
+        box-shadow: 0 0 15px 3px rgb(244, 236, 247);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--purple);
+    color: var(--ivory);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--purple-soft);
+    color: var(--purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(106, 90, 205, 0.4);
+}
+
+.back-to-top:focus {
+    outline: 3px solid var(--purple-soft);
+    outline-offset: 2px;
+}
+
+/* Focus style for accessibility */
+.enter-btn:focus,
+.door-container:focus {
+    outline: 3px solid #8a6bbf;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .header p {
+        max-width: 620px;
+    }
+
+    .subtitle {
+        max-width: 550px;
+    }
+
+    .gallery-container {
+        max-width: 85%;
+        padding: 4px 15px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 100%;
+    }
+
+    .audio-btn {
+        top: 12px;
+        right: 12px;
+        font-size: 20px;
+    }
+
+    .back-to-top {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 20px 10px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        max-width: 80%;
+        padding: 3px 9px;
+    }
+
+    .card-image {
+        height: 100%;
+    }
+
+    .audio-btn {
+        top: 9px;
+        right: 9px;
+        font-size: 18px;
+    }
+
+    .back-to-top {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        bottom: 8px;
+        right: 8px;
+    }
+}

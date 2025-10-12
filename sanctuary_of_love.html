@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <title>Letters of Love for Heeseung</title>
+</head>
+
+<body>
+    <noscript>
+        <div
+            style="background:#fffaf3;color:#533587;padding:24px;text-align:center;font-size:20px;z-index:10001;position:fixed;top:0;left:0;width:100vw;">
+            JavaScript is required to experience the Sanctuary of Love. Please enable JavaScript in your browser
+            settings.
+        </div>
+    </noscript>
+
+    <!-- Page transition overlay -->
+    <div class="page-transition" id="pageTransition" aria-hidden="true">
+        <div class="transition-content">
+            <output class="heart-loader" aria-label="Loading">💜</output>
+            <div class="loading-text" aria-live="polite">Loading Memories...</div>
+        </div>
+    </div>
+
+    <!-- Background music -->
+    <!-- Audio toggle button -->
+    <button id="audioToggle" class="audio-btn" aria-label="Toggle Background Music" aria-pressed="false">
+        <i id="audioIcon" class="fi fi-ss-music"></i>
+    </button>
+
+    <!-- Audio -->
+    <audio id="backgroundAudio" loop preload="auto">
+        <source src="audio/bgMusic.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <main>
+        <!-- Magic dust container -->
+        <div class="magic-dust" id="dustContainer"></div>
+
+        <header class="header">
+            <h1>Whispers Across the World</h1>
+            <p>Words of love, admiration, and birthday wishes from ENGENEs across the globe, for our precious Heeseung
+            </p>
+            <div class="subtitle">"A voice that paints our souls with colors, a smile that lights up our hearts — Lee
+                Heeseung, the shining star that guides Engenes through their darkest nights."</div>
+        </header>
+
+        <section class="gallery-container" id="gallery">
+            <div class="memory-grid">
+                <!-- Message 1 -->
+                <div class="memory-card">
+                    <img src="img/evan1.jpg" alt="img1" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @✨Mercy🤍 <span class="country">PALESTINE</span>
+                        </div>
+                        <div class="message">
+                            Happy Birthday, Heeseung<span class="emoji">✨</span><br />
+                            You’re a melody that never fades, soft yet powerful, calm yet full of light.<br />
+                            Your voice carries comfort, and your presence feels like home after a long day.<br />
+                            Thank you for being the kind of person whose smile can heal and whose passion
+                            inspires.<br />
+                            May this year bring you peace, warmth, and endless moments of joy.<span
+                                class="emoji">🩶✨</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="memory-card">
+                    <img src="img/evan2.jpg" alt="img2" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @⊹ ࣪ ˖ Yuki ⨾༊󠀺 <span class="country">SRI LANKA</span>
+                        </div>
+                        <div class="message">
+                            ....
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 3 -->
+                <div class="memory-card">
+                    <img src="img/evan3.jpg" alt="img3" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @SAYU❤️ <span class="country">INDIA</span>
+                        </div>
+                        <div class="message">
+                            <div class="message-kr">
+                                믿음직한 희승이에게🦌<br /><br />
+                                생일 축하해! 엔하이픈의 든든한 맏형이자 에이스인 너는 정말 매일매일 열심히 하는 모습이 우리에게 큰 힘이 되고 있어. 너의 그 열정과 투지, 그리고 때론
+                                어리숙해
+                                보이기도 하는 모습까지 모두가 다 정말 소중한 너의 일부야.<br /><br />
+                                네 생일에, 지금까지 이뤄온 모든 것들에 대해 스스로 뿌듯해할 수 있는 시간이 되길 바라. 너는 이 세상 무엇보다도 더 많은 사랑과 행복을 받을 자격이 있어.
+                                그냥
+                                있는
+                                그대로의 너에게 정말 고마워. 우리는 항상 여기서 너를 지지할게.<br /><br />
+                                그리고 무리하지만 말고 천천히 해도 괜찮아. 너의 놀라운 작품들을 우리는 항상 기다릴 준비가 되어 있으니까❤️✨😘<br /><br />
+                                사랑 가득,<br />
+                            </div>
+                            SAYANIKA<span class="emoji">💕</span><br /><br />
+                            P. S. - I don't really know if the translation is totally correct... I'm sorry if something
+                            is
+                            wrong<span class="emoji">😐</span><br />
+                            Enjoyyyy!!!!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 4 -->
+                <div class="memory-card">
+                    <img src="img/evan4.jpg" alt="img4" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @Riikita08 <span class="country">INDIA-TRIPURA</span>
+                        </div>
+                        <div class="message">
+                            <span class="emoji">🎂</span>•••HĀPPY BĪRTHDĀY•••<span class="emoji">🥳</span><br />
+                            {On October 15th an Angel<span class="emoji">😇</span> Fell into the world}<span
+                                class="emoji">🌍</span><br />
+                            •Since then The Angel has Made Everyone Happy around him<span class="emoji">🦋</span><br />
+                            •Saved Many People From drowning<span class="emoji">🥹</span><br />
+                            •Whenever the Engene's were down his smile was the reason why we could bear with the pain we
+                            have.<br />
+                            •You are not just an Idol<span class="emoji">🎸✨</span><br />
+                            Who sings,Dance,Perform,Write Songs,Compose Music<span class="emoji">🎶</span><br />
+                            You and Your Existence For Us Engene's is like the Milky way<span
+                                class="emoji">🌌</span><br />
+                            Where we can Sleep peaceful while looking at you face.<br />
+                            Your Dance and Singing<span class="emoji">🎶</span><br />
+                            You have Given Meaning to many people's Life<span class="emoji">🧬</span><br />
+                            I want you to be always happy<span class="emoji">💗</span><br />
+                            Just know you are not alone<span class="emoji">🧡</span>,We are with you
+                            We may be apart,But we are Connected so feel free sometimes to share your hardships with
+                            us..<br />
+                            We might have the power to move the mountains<span class="emoji">🏔️</span> if we see you
+                            suffering just atleast we can Be
+                            there to Empathise with you so you don't feel alone in this huge world.<span
+                                class="emoji">🌍</span><br />
+                            May you Always Shine Heesung<span class="emoji">💋</span><br />
+                            May you Always Rise<span class="emoji">🎶🧬✨</span><br />
+                            Onces Again a Very happy 24th Birthday<span class="emoji">🎂💐</span><br />
+                            My Sunshine<span class="emoji">🌅</span><br />
+                            I hope you always find the reason to go on.<br />
+                            Your Loving<br />
+                            Engene<br />
+                            ~Rikita Debbarma~
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 5 -->
+                <div class="memory-card">
+                    <img src="img/evan5.jpg" alt="img5" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @Dhvan!💋 <span class="country">INDIA</span>
+                        </div>
+                        <div class="message">
+                            Happie BornDay Heeseung oppa, wishing you healthy, joyful and successful future. You have
+                            Angel's voice<span class="emoji">✨</span><br />
+                            Keep going, stay strong and happy.<span class="emoji">🤍<br />
+                                🪷🪷🪷</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 6 -->
+                <div class="memory-card">
+                    <img src="img/evan6.jpg" alt="img6" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @jxkemode✨ <span class="country">CANADA</span>
+                        </div>
+                        <div class="message">
+                            Happy Birthday, Heeseung<span class="emoji">🕊💙</span><br />
+                            Every year, I find myself looking back and feeling so thankful that you chose this path —
+                            that
+                            you worked so hard, that you never gave up, and that you debuted as part of ENHYPEN.
+                            Watching
+                            your journey from the beginning until now has been so special. You’ve grown not only as an
+                            artist but as a person who continues to inspire with your passion, kindness, and quiet
+                            strength.
+                            <br />
+                            I’m so glad I became an ENGENE, because it means I got to meet someone like you — someone
+                            who
+                            gives comfort through his voice and happiness through his smile. Thank you for being you,
+                            for
+                            sharing your music, and for letting us be part of your story. You deserve nothing but love,
+                            peace, and joy. Happy birthday, Heeseung — I’m so proud of you, always.<span
+                                class="emoji">💙</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message 7 -->
+                <div class="memory-card">
+                    <img src="img/evan7.jpg" alt="img7" class="card-image">
+                    <div class="card-content">
+                        <div class="username">
+                            @Deer-Ham-Seung🦌🐹👻 <span class="country">INTERNATIONAL ENGENE</span>
+                        </div>
+                        <div class="message">
+                            Dear Heeseung<br /><br />
+                            Happy Birthday to you<br /><br />
+                            Your not just my hero your also one of my biggest supporters even though you don't know
+                            me.<br /><br />
+                            24 years you've been on this planet and this is my 3rd year spending it with
+                            you.<br /><br />
+                            I hope you have a great day.<br /><br />
+                            A memory I have while being here is when I first came here I was scared to put a profile pic
+                            up
+                            incase someone thought I would copy them so I put the pic at the bottom on. It pulled me in
+                            and
+                            I got to know the stage you then the real you.<br /><br />
+                            You became the real reason I became an Engene cause you let me see being 20+ and being a kid
+                            is
+                            ok since I missed out most of my childhood for personal reasons.<br />
+                            I hope you never change because your amazing and we love you no matter what.<br /><br />
+                            Once again Happy Birthday Love you too the moon and back
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>"We are ENGENE, and we will always support Lee Heeseung"</p>
+            <p style="margin-top: 10px; font-size: 14px;">This sanctuary is filled with love from ENGENEs worldwide — a
+                gentle reminder of how far your light travels, and how deeply you've touched every heart that walks
+                beside you.</p>
+            <p style="margin-top: 20px; font-size: 14px;">
+                Music &copy; <a href="https://www.tiktok.com/@spacenhee" target="_blank">@spacenhee</a> on TikTok and
+                <a href="https://www.youtube.com/@heavensoundss" target="_blank">@heavensoundss</a> on YouTube
+            </p>
+        </footer>
+
+
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
