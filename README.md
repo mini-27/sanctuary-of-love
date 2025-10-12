@@ -6,6 +6,8 @@ This is a place where admiration glows, joy sparkles, and every note whispers, _
 
 This sanctuary is more than messages; it’s a constellation of love, a fan-crafted world that celebrates every little thing that makes Heeseung so special. Step through the magical doors and feel it.✨
 
+💜 **Visit the page here:** [Sanctuary of Love](https://your-public-link.com)
+
 ---
 
 ## 🌟 About This Project
@@ -49,7 +51,7 @@ Visitors can:
 ---
 
 ## 💜 Credits
-- **Music:** @spacenhee on TikTok & @heavensoundss on YouTube  
+- **Music:** @spacenhee on TikTok & @heavensoundss on YouTube
 - **Design & Coding:** Created by Yuki
 - **Special Thanks:** All fans who contributed messages and wishes
 
