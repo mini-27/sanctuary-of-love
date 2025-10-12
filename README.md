@@ -59,7 +59,6 @@ Visitors can:
 
 ## ⚠️ Notes
 - Mobile browsers **require user interaction** (tap/click) to start audio.
-- This project is **personal**; do not redistribute for profit.
 - Best viewed on modern browsers (Chrome, Firefox, Edge, Safari).
 
 ---
